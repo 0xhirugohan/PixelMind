@@ -1,0 +1,12 @@
+{
+  "name": "@PixelMind/sample-agentkit-cli",
+  "description": "Agentkit CLI Sample",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "NODE_OPTIONS='--no-warnings' ts-node ./chatbot.ts"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2"
+  }
+}

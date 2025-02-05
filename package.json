@@ -1,7 +1,15 @@
 {
 	"name": "pixelmind-monorepo",
-	"packageManager": "npm@11.1.0",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"start": "turbo run start",
+		"start:sample-agent-cli": "turbo start --filter @PixelMind/sample-agentkit-cli"
+	},
 	"devDependencies": {
 		"turbo": "^2.4.0"
-	}
+	},
+	"packageManager": "npm@11.1.0"
 }
