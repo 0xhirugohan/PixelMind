@@ -1,0 +1,8 @@
+# turbo
+.turbo
+
+# vim swap files
+*.swp
+
+# node modules
+node_modules/*
