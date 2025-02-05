@@ -1,6 +1,6 @@
 {
 	"name": "pixelmind-monorepo",
-	"packageManager": "pnpm@10.2.0",
+	"packageManager": "npm@11.1.0",
 	"devDependencies": {
 		"turbo": "^2.4.0"
 	}
