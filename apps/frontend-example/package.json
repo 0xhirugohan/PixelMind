@@ -7,6 +7,10 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "lint:biome": "npx @biomejs/biome lint .",
+    "lint:biome:fix": "npx @biomejs/biome lint --write .",
+    "format": "npx @biomejs/biome format .",
+    "format:fix": "npx @biomejs/biome format --write .",
     "preview": "vite preview"
   },
   "dependencies": {

@@ -8,11 +8,29 @@
 		"start": "turbo run start",
 		"start:sample-agent-cli": "turbo start --filter @PixelMind/sample-agentkit-cli",
 		"dev:frontend-example": "turbo dev --filter @PixelMind/frontend-example",
-		"build:frontend-example": "turbo start --filter @PixelMind/frontend-example",
-		"lint:frontend-example": "turbo start --filter @PixelMind/frontend-example",
-		"preview:frontend-example": "turbo start --filter @PixelMind/frontend-example"
+		"build:frontend-example": "turbo build --filter @PixelMind/frontend-example",
+		"lint:frontend-example": "turbo lint --filter @PixelMind/frontend-example",
+		"lint:frontend-example:biome": "turbo lint:biome --filter @PixelMind/frontend-example",
+		"lint:frontend-example:biome:fix": "turbo lint:biome:fix --filter @PixelMind/frontend-example",
+		"format:frontend-example": "turbo format --filter @PixelMind/frontend-example",
+		"format:frontend-example:fix": "turbo format:fix --filter @PixelMind/frontend-example",
+		"preview:frontend-example": "turbo preview --filter @PixelMind/frontend-example",
+
+		"lint:sample-agentkit-cli": "turbo lint --filter @PixelMind/sample-agentkit-cli",
+		"lint:sample-agentkit-cli:biome": "turbo lint:biome --filter @PixelMind/sample-agentkit-cli",
+		"lint:sample-agentkit-cli:biome:fix": "turbo lint:biome:fix --filter @PixelMind/sample-agentkit-cli",
+		"format:sample-agentkit-cli": "turbo format --filter @PixelMind/sample-agentkit-cli",
+		"format:sample-agentkit-cli:fix": "turbo format:fix --filter @PixelMind/sample-agentkit-cli",
+
+		"lint": "turbo lint:biome",
+		"lint:biome": "turbo lint:biome",
+		"lint:biome:fix": "turbo lint:biome:fix",
+		"format": "turbo format",
+		"format:fix": "turbo format:fix"
+
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
 		"turbo": "^2.4.0",
 		"vite": "6.0.11"
 	},

@@ -19,6 +19,18 @@
     "lint": {
       "cache": false
     },
+    "lint:biome": {
+    	"cache": false
+    },
+    "lint:biome:fix": {
+    	"cache": false
+    },
+    "format": {
+      "cache": false
+    },
+    "format:fix": {
+      "cache": false
+    },
     "preview": {
       "cache": false
     }
