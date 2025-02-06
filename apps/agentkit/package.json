@@ -1,5 +1,5 @@
 {
-  "name": "@PixelMind/sample-agentkit-cli",
+  "name": "@PixelMind/agentkit",
   "description": "Agentkit CLI Sample",
   "version": "0.1.0",
   "scripts": {

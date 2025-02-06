@@ -6,7 +6,7 @@
 	],
 	"scripts": {
 		"start": "turbo run start",
-		"start:sample-agent-cli": "turbo start --filter @PixelMind/sample-agentkit-cli",
+		"start:sample-agent-cli": "turbo start --filter @PixelMind/agentkit",
 		"dev:frontend": "turbo dev --filter @PixelMind/frontend",
 		"build:frontend": "turbo build --filter @PixelMind/frontend",
 		"lint:frontend": "turbo lint --filter @PixelMind/frontend",
@@ -16,11 +16,11 @@
 		"format:frontend:fix": "turbo format:fix --filter @PixelMind/frontend",
 		"preview:frontend": "turbo preview --filter @PixelMind/frontend",
 
-		"lint:sample-agentkit-cli": "turbo lint --filter @PixelMind/sample-agentkit-cli",
-		"lint:sample-agentkit-cli:biome": "turbo lint:biome --filter @PixelMind/sample-agentkit-cli",
-		"lint:sample-agentkit-cli:biome:fix": "turbo lint:biome:fix --filter @PixelMind/sample-agentkit-cli",
-		"format:sample-agentkit-cli": "turbo format --filter @PixelMind/sample-agentkit-cli",
-		"format:sample-agentkit-cli:fix": "turbo format:fix --filter @PixelMind/sample-agentkit-cli",
+		"lint:agentkit": "turbo lint --filter @PixelMind/agentkit",
+		"lint:agentkit:biome": "turbo lint:biome --filter @PixelMind/agentkit",
+		"lint:agentkit:biome:fix": "turbo lint:biome:fix --filter @PixelMind/agentkit",
+		"format:agentkit": "turbo format --filter @PixelMind/agentkit",
+		"format:agentkit:fix": "turbo format:fix --filter @PixelMind/agentkit",
 
 		"lint": "turbo lint:biome",
 		"lint:biome": "turbo lint:biome",
