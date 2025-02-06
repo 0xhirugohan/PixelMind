@@ -84,12 +84,12 @@
     "formatter": {
         "enabled": true,
         "formatWithErrors": false,
-	"ignore": [
+        "ignore": [
             "**/dist/**",
             "**/node_modules/**",
             "**/coverage/**",
             "*/*.json",
-	    "biome.json"
+            "biome.json"
         ],
         "attributePosition": "auto",
         "indentStyle": "space",
@@ -102,14 +102,14 @@
             "unsafeParameterDecoratorsEnabled": true
         },
         "formatter": {
-	    "arrowParentheses":"always",
+            "arrowParentheses": "always",
             "bracketSameLine": false,
             "bracketSpacing": true,
             "jsxQuoteStyle": "double",
             "quoteProperties": "asNeeded",
             "quoteStyle": "double",
             "semicolons": "always",
-	    "trailingCommas": "all"
+            "trailingCommas": "all"
         }
     },
     "json": {
