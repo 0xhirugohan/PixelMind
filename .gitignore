@@ -6,3 +6,9 @@
 
 # node modules
 node_modules/*
+
+# environment variable
+.env
+
+# wallet
+wallet_data.txt
