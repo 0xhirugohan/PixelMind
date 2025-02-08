@@ -33,6 +33,8 @@
 	},
 	"packageManager": "npm@11.1.0",
 	"dependencies": {
+		"@apollo/client": "^3.12.11",
+		"graphql": "^16.10.0",
 		"react-router-dom": "^7.1.5"
 	}
 }

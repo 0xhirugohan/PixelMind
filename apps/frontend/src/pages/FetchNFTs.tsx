@@ -1,25 +1,18 @@
 import { useState } from "react";
-
-interface NFT {
-  name: string;
-  description: string;
-}
+import { useNavigate } from "react-router-dom";
+import { fetchNFTsFromGraph } from "../utills/theGraph";
+import { NFT } from "../types/nft"; // Import the NFT type
 
 const FetchNFTs = () => {
   const [walletAddress, setWalletAddress] = useState("");
-  const [nfts, setNFTs] = useState<NFT[]>([]);
+  const [nfts, setNFTs] = useState<NFT[]>([]); // Specify the state type as an array of NFT objects
+  const navigate = useNavigate();
 
   const handleFetchNFTs = async () => {
     try {
-      const response = await fetch("/fetch-nfts", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ walletAddress }),
-      });
-      const data = await response.json();
-      setNFTs(data.nfts);
+      const data: NFT[] = await fetchNFTsFromGraph(walletAddress);
+      setNFTs(data); // Update state with fetched NFTs
+      navigate("/input-art-prompt"); // Redirect to the next step
     } catch (error) {
       console.error("Error fetching NFTs:", error);
     }
@@ -42,11 +35,27 @@ const FetchNFTs = () => {
         Fetch NFTs
       </button>
       <div className="mt-6">
-        {nfts.map((nft, index) => (
-          <div key={index} className="text-white">
-            {nft.name} - {nft.description}
+        {nfts.length > 0 ? (
+          <div>
+            <h2 className="text-2xl font-bold">Fetched NFTs:</h2>
+            {nfts.map((nft, index) => (
+              <div key={index} className="mt-2">
+                <p>ID: {nft.tokenID}</p>
+                <p>Owner: {nft.owner.id}</p>
+                <a
+                  href={nft.tokenURI}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-400"
+                >
+                  View Metadata
+                </a>
+              </div>
+            ))}
           </div>
-        ))}
+        ) : (
+          <p>No NFTs fetched yet.</p>
+        )}
       </div>
     </div>
   );
