@@ -20,6 +20,7 @@
     "@langchain/core": "^0.3.38",
     "@langchain/langgraph": "^0.2.44",
     "@langchain/openai": "^0.4.2",
+    "moralis": "^2.27.2",
     "viem": "^2.22.22"
   }
 }

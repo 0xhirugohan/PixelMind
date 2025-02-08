@@ -37,6 +37,7 @@ function validateEnvironment(): void {
         "OPENAI_API_KEY",
         "CDP_API_KEY_NAME",
         "CDP_API_KEY_PRIVATE_KEY",
+        "MORALIS_API_KEY",
     ];
     for (const varName of requiredVars) {
         if (!process.env[varName]) {
