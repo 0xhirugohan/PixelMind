@@ -18,6 +18,8 @@ import * as dotenv from "dotenv";
 import * as fs from "node:fs";
 import * as readline from "node:readline";
 
+import OpenAI from "openai";
+
 dotenv.config();
 
 // Configure a file to persist the agent's CDP MPC Wallet Data
@@ -76,6 +78,7 @@ async function initializeAgent() {
         const llm = new ChatOpenAI({
             model: "gpt-4o-mini",
         });
+        const openai = new OpenAI();
 
         let walletDataStr: string | null = null;
 
@@ -138,6 +141,7 @@ async function initializeAgent() {
             checkpointSaver: memory,
             messageModifier: `
 				You are a helpful agent that can interact onchain using the Coinbase Developer Platform AgentKit. 
+				You are empowered the Vision from OpenAI to read and see through images.
 				You are empowered to interact onchain using your tools. 
 				If you ever need funds, you can request them from the faucet if you are on network ID 'base-sepolia'. 
 				If not, you can provide your wallet details and request funds from the user.
@@ -153,7 +157,7 @@ async function initializeAgent() {
         const exportedWallet = await walletProvider.exportWallet();
         fs.writeFileSync(WALLET_DATA_FILE, JSON.stringify(exportedWallet));
 
-        return { agent, config: agentConfig };
+        return { agent, config: agentConfig, openai };
     } catch (error) {
         console.error("Failed to initialize agent:", error);
         throw error; // Re-throw to be handled by caller
@@ -286,7 +290,7 @@ async function chooseMode(): Promise<"chat" | "auto"> {
  */
 async function main() {
     try {
-        const { agent, config } = await initializeAgent();
+        const { agent, config, openai } = await initializeAgent();
         const mode = await chooseMode();
 
         if (mode === "chat") {
