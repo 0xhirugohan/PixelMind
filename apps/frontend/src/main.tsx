@@ -1,12 +1,12 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.css";
+import "./index.css"; // Import Tailwind CSS here
 import App from "./App.tsx";
 
 const rootElement =
-    document.getElementById("root") || document.createElement("div");
+  document.getElementById("root") || document.createElement("div");
 createRoot(rootElement).render(
-    <StrictMode>
-        <App />
-    </StrictMode>,
+  <StrictMode>
+    <App />
+  </StrictMode>
 );
