@@ -1,0 +1,97 @@
+/* Home.css */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to bottom, #1a1a2e, #16213e);
+  color: #ffffff;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensures full screen height */
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #1a1a2e;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #7f5af0;
+}
+
+.get-started-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #7f5af0; /* Purple color */
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.get-started-button:hover {
+  background-color: #6c4fc4; /* Slightly darker purple */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
+}
+
+.main {
+  text-align: center;
+  padding: 50px 20px;
+  flex: 1; /* Ensures main content stretches */
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #7f5af0;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  font-size: 1.25rem;
+  color: #dcdcdc;
+  margin: 10px 0;
+}
+
+.nft-image-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nft-card {
+  width: 300px;
+  height: 300px;
+  background: #25274d;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nft-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
