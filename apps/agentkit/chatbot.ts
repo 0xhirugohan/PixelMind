@@ -20,6 +20,9 @@ import * as readline from "node:readline";
 
 import OpenAI from "openai";
 
+import { getListNFTByAddress } from "./onchain";
+import { describeImage, generateImage } from "./openai";
+
 dotenv.config();
 
 // Configure a file to persist the agent's CDP MPC Wallet Data
@@ -291,6 +294,23 @@ async function chooseMode(): Promise<"chat" | "auto"> {
 async function main() {
     try {
         const { agent, config, openai } = await initializeAgent();
+
+		// example of end to end process
+        const address = "0xe5c3A3bad46475dD53100CdBecB0a7541aBA0391";
+        const apiKey = process.env.MORALIS_API_KEY || "";
+        const images = await getListNFTByAddress(apiKey, address);
+        console.log({ images });
+        const artStyleResult = await describeImage(openai, images);
+        console.log({ artStyleResult });
+        const drawingPrompt = "a physical robot teaches kid a computer";
+        const generatedImage = await generateImage(
+            openai,
+            artStyleResult,
+            drawingPrompt,
+        );
+        console.log({ generatedImage });
+
+        /*
         const mode = await chooseMode();
 
         if (mode === "chat") {
@@ -298,6 +318,7 @@ async function main() {
         } else {
             await runAutonomousMode(agent, config);
         }
+	   */
     } catch (error) {
         if (error instanceof Error) {
             console.error("Error:", error.message);
