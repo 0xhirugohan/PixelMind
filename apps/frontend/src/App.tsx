@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { WagmiProvider } from "wagmi"; // Use WagmiConfig for the latest version
 import { config } from "./config";
 import Home from "./pages/Home";
-import ConnectWallet from "./pages/ConnectWallet";
+import ConnectWallet from "./components/ConnectWallet";
 import FetchNFTs from "./pages/FetchNFTs";
 import InputArtPrompt from "./pages/InputArtPrompt";
 import GeneratedArtwork from "./pages/GeneratedArtwork";

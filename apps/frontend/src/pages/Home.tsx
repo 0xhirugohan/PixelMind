@@ -1,4 +1,4 @@
-import Header from "../components/header"; // Adjust the path based on your file structure
+import Header from "../components/Header"; // Adjust the path based on your file structure
 import "./Home.css";
 
 const Home = () => (
