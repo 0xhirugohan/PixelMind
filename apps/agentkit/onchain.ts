@@ -17,10 +17,6 @@ export async function getListNFTByAddress(
     console.log("running getListNFTByAddress...");
 
     try {
-        await Moralis.start({
-            apiKey,
-        });
-
         const response = await Moralis.EvmApi.nft.getWalletNFTs({
             // chain: "0x14a34", // base sepolia
             chain: "0x1", // ethereum mainnet

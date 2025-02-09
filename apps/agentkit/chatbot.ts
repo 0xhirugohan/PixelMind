@@ -19,6 +19,7 @@ import * as fs from "node:fs";
 import * as readline from "node:readline";
 
 import OpenAI from "openai";
+import Moralis from "moralis";
 
 import { getListNFTByAddress } from "./onchain";
 import { describeImage, generateImage } from "./openai";
@@ -75,13 +76,18 @@ validateEnvironment();
  *
  * @returns Agent executor and config
  */
-async function initializeAgent() {
+export async function initializeAgent() {
     try {
         // Initialize LLM
         const llm = new ChatOpenAI({
             model: "gpt-4o-mini",
         });
         const openai = new OpenAI();
+
+        const apiKey = process.env.MORALIS_API_KEY || "";
+        await Moralis.start({
+            apiKey,
+        });
 
         let walletDataStr: string | null = null;
 
@@ -294,10 +300,14 @@ async function chooseMode(): Promise<"chat" | "auto"> {
 async function main() {
     try {
         const { agent, config, openai } = await initializeAgent();
-
-		// example of end to end process
-        const address = "0xe5c3A3bad46475dD53100CdBecB0a7541aBA0391";
         const apiKey = process.env.MORALIS_API_KEY || "";
+        await Moralis.start({
+            apiKey,
+        });
+
+        // example of end to end process
+        const address = "0xe5c3A3bad46475dD53100CdBecB0a7541aBA0391";
+	const apiKey = process.env.MORALIS_API_KEY || "";
         const images = await getListNFTByAddress(apiKey, address);
         console.log({ images });
         const artStyleResult = await describeImage(openai, images);
