@@ -307,7 +307,6 @@ async function main() {
 
         // example of end to end process
         const address = "0xe5c3A3bad46475dD53100CdBecB0a7541aBA0391";
-	const apiKey = process.env.MORALIS_API_KEY || "";
         const images = await getListNFTByAddress(apiKey, address);
         console.log({ images });
         const artStyleResult = await describeImage(openai, images);

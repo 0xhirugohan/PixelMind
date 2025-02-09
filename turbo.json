@@ -33,6 +33,9 @@
     },
     "preview": {
       "cache": false
+    },
+    "server": {
+      "cache": false
     }
   }
 }

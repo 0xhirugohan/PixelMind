@@ -18,6 +18,7 @@
 		"lint:agentkit": "turbo lint --filter @PixelMind/agentkit",
 		"lint:agentkit:biome": "turbo lint:biome --filter @PixelMind/agentkit",
 		"lint:agentkit:biome:fix": "turbo lint:biome:fix --filter @PixelMind/agentkit",
+		"server": "turbo server --filter @PixelMind/agentkit",
 		"format:agentkit": "turbo format --filter @PixelMind/agentkit",
 		"format:agentkit:fix": "turbo format:fix --filter @PixelMind/agentkit",
 		"lint": "turbo lint:biome",
