@@ -1,12 +1,17 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import "./index.css"; // Import Tailwind CSS here
-import App from "./App.tsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { WagmiProvider } from "wagmi";
+import { config } from "./config";
+import App from "./App"; // Your App component
 
-const rootElement =
-  document.getElementById("root") || document.createElement("div");
-createRoot(rootElement).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+root.render(
+  <React.StrictMode>
+    <WagmiProvider config={config}>
+      <App />
+    </WagmiProvider>
+  </React.StrictMode>
 );
