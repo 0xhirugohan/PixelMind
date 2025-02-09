@@ -1,17 +1,10 @@
+import Header from "../components/header"; // Adjust the path based on your file structure
 import "./Home.css";
 
 const Home = () => (
   <div className="bg-gradient-to-b from-gray-900 to-black text-white min-h-screen">
-    {/* Header Section */}
-    <header className="flex justify-between items-center px-10 py-6">
-      <h1 className="text-3xl font-bold text-purple-400">DigitalArtMind</h1>
-      <a
-        href="/connect-wallet"
-        className="bg-purple-500 px-6 py-2 rounded-lg text-white hover:bg-purple-400"
-      >
-        Get Started
-      </a>
-    </header>
+    {/* Use the Header component */}
+    <Header />
 
     {/* Hero Section */}
     <main className="flex flex-col items-center text-center px-6 py-16">

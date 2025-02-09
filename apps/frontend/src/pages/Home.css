@@ -6,6 +6,15 @@ body {
   color: #ffffff;
 }
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh; /* Ensures full screen height */
+  padding: 0;
+  margin: 0;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -14,132 +23,75 @@ body {
   background-color: #1a1a2e;
 }
 
-.header h1 {
+.header-title {
   font-size: 2rem;
   font-weight: bold;
   color: #7f5af0;
 }
 
-.header nav {
-  display: flex;
-  gap: 20px;
-}
-
-.header nav a {
-  text-decoration: none;
-  color: #dcdcdc;
-  font-size: 1rem;
-}
-
-.header nav a:hover {
-  color: #7f5af0;
-}
-
-.header .button {
-  padding: 10px 20px;
-  background-color: #7f5af0;
+.get-started-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #7f5af0; /* Purple color */
   color: white;
-  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 1rem;
+  border-radius: 30px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
-.header .button:hover {
-  background-color: #6c4fc4;
+.get-started-button:hover {
+  background-color: #6c4fc4; /* Slightly darker purple */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
 }
 
 .main {
   text-align: center;
   padding: 50px 20px;
+  flex: 1; /* Ensures main content stretches */
 }
 
-.main h1 {
+.hero-title {
   font-size: 4rem;
   font-weight: bold;
   color: #7f5af0;
   margin-bottom: 10px;
 }
 
-.main p {
+.hero-subtitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-description {
   font-size: 1.25rem;
-  margin: 10px 0;
   color: #dcdcdc;
+  margin: 10px 0;
 }
 
-.buttons {
-  margin-top: 30px;
-}
-
-.buttons a {
-  padding: 10px 30px;
-  margin: 0 10px;
-  font-size: 1rem;
-  background-color: #3d3d66;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.buttons a:hover {
-  background-color: #52527e;
-}
-
-.statistics {
+.nft-image-container {
+  margin-top: 50px;
   display: flex;
   justify-content: center;
-  gap: 50px;
-  margin-top: 50px;
+  align-items: center;
 }
 
-.statistics .stat {
-  text-align: center;
-}
-
-.statistics .stat h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #7f5af0;
-}
-
-.statistics .stat p {
-  font-size: 1rem;
-  color: #dcdcdc;
-}
-
-.theme-campaign {
-  text-align: center;
-  margin-top: 70px;
-}
-
-.theme-campaign h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 30px;
-}
-
-.theme-campaign .card {
+.nft-card {
   width: 300px;
-  height: 400px;
-  margin: 0 auto;
+  height: 300px;
   background: #25274d;
   border-radius: 10px;
   overflow: hidden;
-  position: relative;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-.theme-campaign .card img {
+.nft-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.theme-campaign .card .overlay {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-  padding: 10px;
-  text-align: left;
 }
