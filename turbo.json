@@ -1,0 +1,41 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "globalDependencies": [".env"],
+  "tasks": {
+    "start": {
+      "cache": false
+    },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "lint": {
+      "cache": false
+    },
+    "lint:biome": {
+    	"cache": false
+    },
+    "lint:biome:fix": {
+    	"cache": false
+    },
+    "format": {
+      "cache": false
+    },
+    "format:fix": {
+      "cache": false
+    },
+    "preview": {
+      "cache": false
+    },
+    "server": {
+      "cache": false
+    }
+  }
+}

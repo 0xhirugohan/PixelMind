@@ -1,0 +1,18 @@
+# turbo
+.turbo
+
+# vim swap files
+*.swp
+
+# build files
+*/dist/*
+apps/agentkit/dist/*
+
+# node modules
+node_modules/*
+
+# environment variable
+.env
+
+# wallet
+wallet_data.txt
