@@ -69,7 +69,7 @@ function validateEnvironment(): void {
 }
 
 // Add this right after imports and before any other code
-validateEnvironment();
+validateEnvionment();
 
 /**
  * Initialize the agent with CDP Agentkit
@@ -334,12 +334,14 @@ async function main() {
         }
         process.exit(1);
     }
+    process.exit(1);
+  }
 }
 
 if (require.main === module) {
-    console.log("Starting Agent...");
-    main().catch((error) => {
-        console.error("Fatal error:", error);
-        process.exit(1);
-    });
+  console.log("Starting Agent...");
+  main().catch((error) => {
+    console.error("Fatal error:", error);
+    process.exit(1);
+  });
 }

@@ -29,8 +29,16 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
+		"autoprefixer": "^10.4.20",
+		"postcss": "^8.5.1",
+		"tailwindcss": "^4.0.5",
 		"turbo": "^2.4.0",
 		"vite": "6.0.11"
 	},
-	"packageManager": "npm@11.1.0"
+	"packageManager": "npm@11.1.0",
+	"dependencies": {
+		"@apollo/client": "^3.12.11",
+		"graphql": "^16.10.0",
+		"react-router-dom": "^7.1.5"
+	}
 }
